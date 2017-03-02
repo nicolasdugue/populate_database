@@ -1,0 +1,3 @@
+sudo apt-get install python3-dev libmysqlclient-dev
+sudo pip install mysqlclient
+mysql -u root ProjetBDDL2 < ../database/modele_physique_DriveInMYSQL.SQL

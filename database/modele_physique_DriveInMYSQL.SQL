@@ -317,6 +317,8 @@ ALTER TABLE ITEM ADD (
           FOREIGN KEY (REFERENCE)
                REFERENCES PRODUIT (REFERENCE))   ;
 
+ALTER TABLE PRODUIT MODIFY COLUMN FICHIER_IMAGE VARCHAR(255) NOT NULL DEFAULT '';
+
 
 -- -----------------------------------------------------------------------------
 --                FIN DE GENERATION

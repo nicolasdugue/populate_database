@@ -43,7 +43,7 @@ def get_adresse():
     
 
 
-db = create_engine('mysql://root:password@localhost/ProjetBDDL2')
+db = create_engine('mysql://root@localhost/ProjetBDDL2')
 
 db.echo = True  
 

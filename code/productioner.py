@@ -91,7 +91,6 @@ for s in sous_rayons:
         prix_kilo=get_prix()
         stock=get_quantite()
         liquide="F"
-        print s
         ip.execute(REFERENCE=reference, LIBELLE=s, MARQUE=marque, PRIX_UNIT_HT=prix_unit, PRIX_KILO_OU_LITRE=prix_kilo, QUANTITE_STOCK=stock, LIQUIDE_VF=liquide)
         isr.execute(REFERENCE=reference, NOM_SR=s)
         

@@ -20,8 +20,8 @@ categories = Table('CATEGORIE', metadata, autoload=True)
 i = categories.insert()
 
 tab_cat=["Viandes", "Poissons", "Fruits et Legumes", "Boissons"]
-# for cat in tab_cat:
-#     i.execute(NOM_CATEGORIE=cat)
+for cat in tab_cat:
+     i.execute(NOM_CATEGORIE=cat)
     
 rayon_table=Table('RAYON', metadata, autoload=True)
 i = rayon_table.insert()
@@ -31,10 +31,10 @@ rayons["Poissons"]=["Poissonnerie", "Traiteur"]
 rayons["Fruits et Legumes"]=["Fruits", "Legumes"]
 rayons["Boissons"]=["Sodas", "Eaux", "Lait", "Vin", "Spiritueux"]
 
-# for categorie in rayons.keys():
-#     rayon_list=rayons[categorie]
-#     for r in rayon_list:
-#         i.execute(NOM_RAYON=r, NOM_CATEGORIE=categorie)
+for categorie in rayons.keys():
+     rayon_list=rayons[categorie]
+     for r in rayon_list:
+         i.execute(NOM_RAYON=r, NOM_CATEGORIE=categorie)
 
 rayon_table=Table('SOUS_RAYON', metadata, autoload=True)
 i = rayon_table.insert()
@@ -50,10 +50,10 @@ sous_rayons["Eaux"]=["Minerales", "De Source", "Magnesienne"]
 sous_rayons["Lait"]=["Vache", "Amande", "Soja"]
 sous_rayons["Vin"]=["Blanc", "Rouge", "Rose"]
 sous_rayons["Spiritueux"]=["Vodka", "Whisky", "Gin"]
-# for rayon in sous_rayons.keys():
-#     rayon_list=sous_rayons[rayon]
-#     for r in rayon_list:
-#         i.execute(NOM_SR=r, NOM_RAYON=rayon)
+for rayon in sous_rayons.keys():
+     rayon_list=sous_rayons[rayon]
+     for r in rayon_list:
+         i.execute(NOM_SR=r, NOM_RAYON=rayon)
 
 rayon_table=Table('SOUS_SOUS_RAYON', metadata, autoload=True)
 i = rayon_table.insert()
