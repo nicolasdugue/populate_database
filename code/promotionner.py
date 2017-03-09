@@ -22,7 +22,9 @@ def get_date_fin():
 def get_max_client():
     return random.randint(1,3)
 
-db = create_engine('mysql://root:password@localhost/ProjetBDDL2')
+import sys
+
+db = create_engine('mysql://root:password@localhost/'+sys.argv[1])
 
 db.echo = True
 

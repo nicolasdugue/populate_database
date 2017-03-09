@@ -43,7 +43,9 @@ def get_adresse():
     
 
 
-db = create_engine('mysql://root@localhost/ProjetBDDL2')
+import sys
+
+db = create_engine('mysql://root:password@localhost/'+sys.argv[1])
 
 db.echo = True  
 

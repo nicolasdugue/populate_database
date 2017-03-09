@@ -55,7 +55,10 @@ s_r["Soja"]=["Lait de soja"]
 from sqlalchemy import create_engine, MetaData, Table
 
 
-db = create_engine('mysql://root:password@localhost/ProjetBDDL2')
+import sys
+
+
+db = create_engine('mysql://root:password@localhost/'+sys.argv[1])
 
 db.echo = True
 

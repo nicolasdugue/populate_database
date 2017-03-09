@@ -29,7 +29,10 @@ def generate_nb_articles():
 def get_qte():
 	return random.randint(1,10)
 
-db = create_engine('mysql://root@localhost/ProjetBDDL2')
+import sys
+
+
+db = create_engine('mysql://root:password@localhost/'+sys.argv[1])
 
 db.echo = True  
 

@@ -8,9 +8,10 @@ Created on Apr 12, 2016
 
 
 from sqlalchemy import create_engine, MetaData, Table
+import sys
 
 
-db = create_engine('mysql://root:password@localhost/ProjetBDDL2')
+db = create_engine('mysql://root:password@localhost/'+sys.argv[1])
 
 db.echo = True
 
